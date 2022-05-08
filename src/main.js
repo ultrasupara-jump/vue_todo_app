@@ -2,6 +2,7 @@ import { createApp, VueElement } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { initializeApp } from 'firebase/app'; //追加
+import 'firebase/firestore' //追加
 
 VueElement.config.productionTip = false
 
@@ -17,3 +18,5 @@ const firebaseConfig = {
 };
 
 initializeApp(firebaseConfig); //追加
+
+export const db = firebase.firestore() // 追加
